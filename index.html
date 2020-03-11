@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task Management App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+<div class="container">
+    <form class="task-form">
+        <div class="flex">
+            <textarea id="task-value" cols="50" rows="2" placeholder="Add new task" class="task-form-input"></textarea>
+            <fieldset class="task-form-select">
+                <legend >Select task's priority & deadline: </legend>
+                <label for="low-priority">Low</label>
+                <input type="radio" name="priority" value="Low" id="low-priority" checked class="task-form-select-btn">
+                <label for="medium-priority">Medium</label>
+                <input type="radio" name="priority" value="Medium" id="medium-priority" class="task-form-select-btn">
+                <label for="high-priority">High</label>
+                <input type="radio" name="priority" value="High" id="high-priority" class="task-form-select-btn">
+                <label for="datepicker">Deadline:</label><input type="text" id="datepicker">
+            </fieldset>
+        </div>
+        <button type="submit" class="submit-btn">Add task</button>
+    </form>
+    <h1>Tasks List</h1>
+    <div class="tasks-container">
+        <div class="task-list-headings">
+            <div class="task-content-headings">Content</div>
+            <div class="task-priority-headings">Priority</div>
+            <div class="task-deadline-headings">Deadline</div>
+        </div>
+        <ul class="task-list"></ul>
+    </div>
+</div>
+
+<script src="task.js"></script>
+</body>
+</html>
